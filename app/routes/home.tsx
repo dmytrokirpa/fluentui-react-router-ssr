@@ -1,13 +1,12 @@
-import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
+import { Button, Card, Title1, Body1 } from '@fluentui/react-components';
+import { BookmarkRegular } from '@fluentui/react-icons';
 
-export function meta({}: Route.MetaArgs) {
-  return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
-  ];
-}
-
-export default function Home() {
-  return <Welcome />;
+export default function Index() {
+  return (
+    <Card style={{ maxWidth: '400px', margin: '20px' }}>
+      <Title1>Fluent UI + Remix</Title1>
+      <Body1>Welcome to your new app!</Body1>
+      <Button appearance='primary' icon={<BookmarkRegular />}>Click me</Button>
+    </Card>
+  );
 }

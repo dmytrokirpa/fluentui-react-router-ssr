@@ -1,5 +1,5 @@
 {
-  "name": "fluentui-react-router",
+  "name": "fluentui-react-router-ssr",
   "private": true,
   "type": "module",
   "scripts": {
@@ -9,6 +9,8 @@
     "typecheck": "react-router typegen && tsc"
   },
   "dependencies": {
+    "@fluentui/react-components": "^9.56.3",
+    "@fluentui/react-icons": "^2.0.266",
     "@react-router/node": "^7.0.2",
     "@react-router/serve": "^7.0.2",
     "isbot": "^5.1.17",
@@ -17,15 +19,14 @@
     "react-router": "^7.0.2"
   },
   "devDependencies": {
+    "@griffel/vite-plugin": "^0.1.9",
     "@react-router/dev": "^7.0.2",
     "@types/node": "^20",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
-    "autoprefixer": "^10.4.20",
-    "postcss": "^8.4.49",
-    "tailwindcss": "^3.4.15",
     "typescript": "^5.6.3",
     "vite": "^5.4.11",
+    "vite-plugin-cjs-interop": "^2.1.6",
     "vite-tsconfig-paths": "^5.1.2"
   }
 }

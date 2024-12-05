@@ -6,9 +6,10 @@ import {
   Scripts,
   ScrollRestoration,
 } from "react-router";
+// 1. Import Fluent UI dependencies
+import { FluentProvider, webLightTheme } from '@fluentui/react-components';
 
 import type { Route } from "./+types/root";
-import stylesheet from "./app.css?url";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -21,7 +22,6 @@ export const links: Route.LinksFunction = () => [
     rel: "stylesheet",
     href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
   },
-  { rel: "stylesheet", href: stylesheet },
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
@@ -32,9 +32,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
         <Links />
+         {/* 2. Add insertion point for Fluent UI styles */}
+         <meta name="fluentui-insertion-point" content="fluentui-insertion-point" />
       </head>
       <body>
-        {children}
+        {/* 3. Wrap app content with FluentProvider */}
+        <FluentProvider theme={webLightTheme}>{children}</FluentProvider>
         <ScrollRestoration />
         <Scripts />
       </body>
