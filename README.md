@@ -110,7 +110,7 @@ startTransition(() => {
 });
 ```
 
-- Update the `entry.server.tsx`:
+- and then update the `entry.server.tsx`:
 
 ```tsx
 // 1. Import required Fluent UI SSR utilities
