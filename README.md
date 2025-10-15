@@ -84,6 +84,32 @@ export function Layout({ children }: { children: React.ReactNode }) {
 npx react-router reveal
 ```
 
+- Update the `entry.client.tsx` to wrap the app with Fluent UI providers:
+
+```tsx
+import {
+  createDOMRenderer,
+  RendererProvider,
+  SSRProvider,
+} from '@fluentui/react-components';
+import { startTransition, StrictMode } from 'react';
+import { hydrateRoot } from 'react-dom/client';
+import { HydratedRouter } from 'react-router/dom';
+
+startTransition(() => {
+  hydrateRoot(
+    document,
+    <StrictMode>
+      <RendererProvider renderer={createDOMRenderer()}>
+        <SSRProvider>
+          <HydratedRouter />
+        </SSRProvider>
+      </RendererProvider>
+    </StrictMode>
+  );
+});
+```
+
 - and then update the `entry.server.tsx`:
 
 ```tsx
