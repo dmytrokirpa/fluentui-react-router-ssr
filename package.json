@@ -19,7 +19,7 @@
     "react-router": "^7.0.2"
   },
   "devDependencies": {
-    "@griffel/vite-plugin": "^0.1.9",
+    "@griffel/vite-plugin": "^0.1.14",
     "@react-router/dev": "^7.0.2",
     "@types/node": "^20",
     "@types/react": "^18.3.12",
