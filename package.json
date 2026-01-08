@@ -11,7 +11,7 @@
   "dependencies": {
     "@fluentui/react-components": "^9.56.3",
     "@fluentui/react-icons": "^2.0.266",
-    "@react-router/node": "^7.0.2",
+    "@react-router/node": "^7.9.4",
     "@react-router/serve": "^7.0.2",
     "isbot": "^5.1.17",
     "react": "^18.3.1",
